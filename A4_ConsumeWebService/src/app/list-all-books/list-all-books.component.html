@@ -1,0 +1,13 @@
+<!-- Asma Ahmed -->
+<!-- 991699083 -->
+ 
+<div class="container mt-4">
+  <h3>All Books</h3>
+  <div *ngIf="books.length === 0" class="alert alert-info">No books found.</div>
+  <div *ngFor="let book of books" class="card p-3 my-2" [ngStyle]="{'background-color': '#fafafa'}">
+    <strong>{{ book.title }}</strong>
+    <div>Author: {{ book.authorName }}</div>
+    <div>Price: {{ book.price | currency }}</div>
+    <div>In Stock: {{ book.quantity }}</div>
+  </div>
+</div>
